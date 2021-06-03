@@ -62,8 +62,9 @@ img{
   }
 
   .about {
-    height: 100vh;
+    height: auto;
     width: auto;
+    margin-bottom: 50px;
     color: #000;
     padding: 10px;
     display: flex;
@@ -80,7 +81,7 @@ img{
     margin: 10px 30px;
     height: 450px;
     width: 440px;
-    box-shadow: -5px 5px 30px;
+    box-shadow: -2px 2px 10px;
 
 }
   
@@ -196,4 +197,135 @@ img{
 
 .school .course, .uni {
     width: 50%;
+}
+
+
+
+/* media queary */
+
+@media (max-width: 1024px){
+    .about {
+        margin-top: 40px;
+    }
+
+    .about .photo{
+        margin: 10px 30px;
+        height: 450px;
+        width: 440px;
+        box-shadow: -3px 3px 10px;
+    
+    }
+}
+
+@media (max-width: 768px){
+
+    .about {
+        margin-top: 40px;
+    }
+    .about .photo{
+        margin: 20px 30px;
+        height: 450px;
+        width: 440px;
+        box-shadow: -3px 3px 10px;
+        width: 300px;
+        height: 300px;
+    
+    }
+
+    .aboutme p, .experiences p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 414px) {
+
+
+    .experiences h1 {
+        font-size: 30px;
+    }
+
+
+
+    .education .school {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .education .school .uni{
+        width: 300px;
+    }
+
+    .education .school .course{
+        width: 290px;
+    }
+
+}
+
+@media (max-width: 375px){
+    .landing {
+        height: 700px;
+    }
+    .landing h1 {
+        font-size: 25px;
+    }
+    .about {
+        display: grid;
+        grid-auto-flow: row;
+    }
+    .aboutme{
+        width: 300px;
+    }
+
+    .aboutme h3 {
+        font-size: 20px ;
+    }
+
+    .aboutme p {
+        font-size: 10px;
+    }
+
+    .button {
+    padding: 15px 15px;
+    font-size: 14px;
+    }
+
+
+    .experiences h1 {
+        font-size: 30px;
+    }
+
+
+
+    .education .school {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .education .school .uni{
+        width: 300px;
+    }
+
+    .education .school .course{
+        width: 290px;
+    }
+
+    @media (max-width: 320px){
+        .landing {
+            height: 600px;
+        }
+
+    .experiences h1 {
+        font-size: 20px;
+    }
+
+        .education .school .course{
+            width: 250px;
+        }
+    }
+
+
+    
+
 }
