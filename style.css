@@ -63,7 +63,8 @@ img{
 
   .about {
     height: auto;
-    width: auto;
+    margin: auto;
+    width: 80%;
     margin-bottom: 50px;
     color: #000;
     padding: 10px;
@@ -162,7 +163,7 @@ img{
 }
 
 .experiences{
-    width: 70%;
+    width: 80%;
     margin: auto;
     margin-bottom: 40px;
 }
@@ -219,9 +220,18 @@ img{
 
 @media (max-width: 768px){
 
+    .experiences h1 {
+        font-size: 20px;
+    }
+
+  .about {
+    margin: 0%;
+  }
+
     .about {
         margin-top: 40px;
     }
+
     .about .photo{
         margin: 20px 30px;
         height: 450px;
@@ -239,12 +249,17 @@ img{
 
 @media (max-width: 414px) {
 
-
-    .experiences h1 {
-        font-size: 30px;
+    h1, h2, h3{
+        font-size: 18px;
     }
 
+    .uni h2{
+        margin-bottom: 15px;
+    }
 
+    .experiences h1 {
+        font-size: 20px;
+    }
 
     .education .school {
         display: grid;
@@ -278,7 +293,7 @@ img{
     }
 
     .aboutme h3 {
-        font-size: 20px ;
+        font-size: 18px ;
     }
 
     .aboutme p {
@@ -287,15 +302,13 @@ img{
 
     .button {
     padding: 15px 15px;
-    font-size: 14px;
+    font-size: 13px;
     }
 
 
     .experiences h1 {
-        font-size: 30px;
+        font-size: 20px;
     }
-
-
 
     .education .school {
         display: grid;
