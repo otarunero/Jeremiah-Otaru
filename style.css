@@ -10,6 +10,7 @@
 
 h1 {
     font-size: 50px;
+    font-weight: lighter;
     
 }
 
@@ -30,6 +31,7 @@ p{
 body {
     font-family: 'Roboto', 'sans-serif';
     line-height: 1.6;
+    
 }
 
 img{
@@ -38,28 +40,38 @@ img{
 }
 
 
-
+.background{
+    background-color: #82b74b;
+}
 .landing {
-    background-color: rgb(45, 45, 59);
+    background-image: url("images/Shooting-Star.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
     height: 100vh;
     width: 100%;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     resize: vertical;
     overflow: auto;
  }
-
+/*
  .landing .grid-1 {
     margin: auto;
     width: auto;
-    color: white;
+    color: rgb(240, 234, 234);
+    opacity: 100%;
     padding: 20px;
     resize: vertical;
     overflow: auto;
     text-align: center;
-    
-  }
+    z-index: 2;
+
+  }*/
 
   .about {
     height: auto;
@@ -78,17 +90,16 @@ img{
     font-weight: 900;
 }
 
+
 .about .photo{
     margin: 10px 30px;
     height: 450px;
     width: 440px;
-    box-shadow: -2px 2px 10px;
-
+    border-radius: 13px;
+    box-shadow: 0 3px 10px rgba(0,0,0,2);
 }
   
-  .photo img{
-      border-radius: 10px 40px 10px;
-  }
+  
 
 .details {
     margin: 10px 30px;
@@ -135,7 +146,7 @@ img{
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    box-shadow: -5px 5px 10px rgb(199, 191, 191);
+    box-shadow: 0 3px 10px rgba(0,0,0,2);
 }
 
 .button:hover {
@@ -201,24 +212,58 @@ img{
 }
 
 
-
-/* media queary */
-
-@media (max-width: 1024px){
-    .about {
-        margin-top: 40px;
-    }
-
-    .about .photo{
-        margin: 10px 30px;
-        height: 450px;
-        width: 440px;
-        box-shadow: -3px 3px 10px;
-    
-    }
+/* Animation */
+.photo {
+    animation: slideInFromLeft 1s ease;
 }
 
-@media (max-width: 768px){
+.aboutme{
+  animation: slideInFromRight 1s linear;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@media (max-width: 850px) and (min-width: 700px) {
 
     .experiences h1 {
         font-size: 20px;
@@ -236,7 +281,6 @@ img{
         margin: 20px 30px;
         height: 450px;
         width: 440px;
-        box-shadow: -3px 3px 10px;
         width: 300px;
         height: 300px;
     
@@ -247,14 +291,39 @@ img{
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 700px) and (min-width: 400px) {
 
     h1, h2, h3{
         font-size: 18px;
     }
 
+
     .uni h2{
         margin-bottom: 15px;
+    }
+    .about .photo{
+        margin: 20px 30px;
+        height: 450px;
+        width: 440px;
+        width: 300px;
+        height: 300px;
+    
+    }
+
+    .about {
+        display: grid;
+        grid-auto-flow: row;
+    }
+    .aboutme{
+        width: 300px;
+    }
+
+    .aboutme h3 {
+        font-size: 18px ;
+    }
+
+    .aboutme p {
+        font-size: 10px;
     }
 
     .experiences h1 {
@@ -277,8 +346,25 @@ img{
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 399px) and (min-width: 300px){
+
+    p {
+        font-size: 10px;
+    }
+    h1 h2 h3 {
+        font-size: 20px;
+    }
+
+    .experiences h1{
+        font-size: 20px;
+    }
+
+    .experiences h2, h3{
+        font-size: 15px;
+    }
+
     .landing {
+        margin: auto;
         height: 700px;
     }
     .landing h1 {
@@ -286,8 +372,20 @@ img{
     }
     .about {
         display: grid;
-        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
+
+    .about .photo{
+        margin: auto;
+        justify-content: center;
+        height: 150px;
+        width: 140px;
+        width: 200px;
+        height:200px;
+    
+    }
+
     .aboutme{
         width: 300px;
     }
@@ -309,7 +407,7 @@ img{
     .experiences h1 {
         font-size: 20px;
     }
-
+    
     .education .school {
         display: grid;
         grid-template-columns: 1fr;
@@ -323,22 +421,5 @@ img{
     .education .school .course{
         width: 290px;
     }
-
-    @media (max-width: 320px){
-        .landing {
-            height: 600px;
-        }
-
-    .experiences h1 {
-        font-size: 20px;
-    }
-
-        .education .school .course{
-            width: 250px;
-        }
-    }
-
-
-    
-
+   
 }
